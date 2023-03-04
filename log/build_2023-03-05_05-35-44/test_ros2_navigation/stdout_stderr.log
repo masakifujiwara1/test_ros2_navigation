@@ -1,0 +1,35 @@
+running egg_info
+creating build/test_ros2_navigation/test_ros2_navigation.egg-info
+writing build/test_ros2_navigation/test_ros2_navigation.egg-info/PKG-INFO
+writing dependency_links to build/test_ros2_navigation/test_ros2_navigation.egg-info/dependency_links.txt
+writing entry points to build/test_ros2_navigation/test_ros2_navigation.egg-info/entry_points.txt
+writing requirements to build/test_ros2_navigation/test_ros2_navigation.egg-info/requires.txt
+writing top-level names to build/test_ros2_navigation/test_ros2_navigation.egg-info/top_level.txt
+writing manifest file 'build/test_ros2_navigation/test_ros2_navigation.egg-info/SOURCES.txt'
+reading manifest file 'build/test_ros2_navigation/test_ros2_navigation.egg-info/SOURCES.txt'
+writing manifest file 'build/test_ros2_navigation/test_ros2_navigation.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/fmasa/ros2_ws/src/test_ros2_navigation/build/test_ros2_navigation/build
+creating /home/fmasa/ros2_ws/src/test_ros2_navigation/build/test_ros2_navigation/build/lib
+creating /home/fmasa/ros2_ws/src/test_ros2_navigation/build/test_ros2_navigation/build/lib/test_ros2_navigation
+copying test_ros2_navigation/__init__.py -> /home/fmasa/ros2_ws/src/test_ros2_navigation/build/test_ros2_navigation/build/lib/test_ros2_navigation
+running install
+running install_lib
+creating /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/lib/python3.8/site-packages/test_ros2_navigation
+copying /home/fmasa/ros2_ws/src/test_ros2_navigation/build/test_ros2_navigation/build/lib/test_ros2_navigation/__init__.py -> /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/lib/python3.8/site-packages/test_ros2_navigation
+byte-compiling /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/lib/python3.8/site-packages/test_ros2_navigation/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/share/ament_index
+creating /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/share/ament_index/resource_index
+creating /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/share/ament_index/resource_index/packages
+copying resource/test_ros2_navigation -> /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/share/ament_index/resource_index/packages
+copying package.xml -> /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/share/test_ros2_navigation
+copying launch/turtlebot3_house.launch.py -> /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/share/test_ros2_navigation
+copying launch/empty_world.launch.py -> /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/share/test_ros2_navigation
+copying launch/navigation2.launch.py -> /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/share/test_ros2_navigation
+copying launch/robot_state_publisher.launch.py -> /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/share/test_ros2_navigation
+running install_egg_info
+Copying build/test_ros2_navigation/test_ros2_navigation.egg-info to /home/fmasa/ros2_ws/src/test_ros2_navigation/install/test_ros2_navigation/lib/python3.8/site-packages/test_ros2_navigation-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/fmasa/ros2_ws/src/test_ros2_navigation/build/test_ros2_navigation/install.log'

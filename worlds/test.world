@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+  <world name="default">
+    <!--地面を導入する-->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <!--ライティングを導入する-->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!--ここからモノリスの記述-->
+    <model name='monolith'>
+      <!--位置と角度。x,y,z,roll,pitch,yaw 単位はメートルとdegree-->
+      <pose>0 0 0 0 0 0</pose>
+
+      <!--パーツの記述-->
+      <link name='body'>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <!--質量-->
+          <mass>1</mass>
+          <!--慣性行列（後述）-->
+          <inertia>
+            <ixx>0.016667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.014167</iyy>
+            <iyz>0</iyz>
+            <izz>0.004167</izz>
+          </inertia>
+        </inertial>
+
+        <!--表示用の記述-->
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <!--x,y,zのサイズ（メートル）-->
+              <size>0.1 0.2 0.4</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <!--衝突判定の範囲-->
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <!--x,y,zのサイズ（メートル）-->
+              <size>0.1 0.2 0.4</size>
+            </box>
+          </geometry>
+        </collision>
+
+      </link>
+    </model>
+
+  </world>
+</sdf>

@@ -1,0 +1,8 @@
+gazebo_ros
+geometry_msgs
+launch
+nav_msgs
+rclcpp
+sensor_msgs
+setuptools
+tf2
