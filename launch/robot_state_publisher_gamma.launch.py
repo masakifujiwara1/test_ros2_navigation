@@ -30,23 +30,23 @@ def generate_launch_description():
     TURTLEBOT3_MODEL = os.environ['TURTLEBOT3_MODEL']
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
-    xacro_file_name = 'turtlebot3_' + TURTLEBOT3_MODEL + '.urdf.xacro'
-    urdf_file_name = 'turtlebot3_' + TURTLEBOT3_MODEL + '2.urdf'
+    xacro_file_name = 'orne_gamma.urdf.xacro'
+    urdf_file_name = 'orne_gamma.urdf'
     # urdf_file_name = 'turtlebot3_' + TURTLEBOT3_MODEL + '.urdf'
-    urdf_path = '/home/fmasa/ros2_ws/src/test_ros2_navigation/robot_description'
+    urdf_path = '/home/fmasa/ros2_ws/src/test_ros2_navigation/robot_description/urdf'
 
     print('urdf_file_name : {}'.format(urdf_file_name))
 
-    # xacro_path = os.path.join(
-    #     # get_package_share_directory('turtlebot3_description'),
-    #     urdf_path,
-    #     'urdf',
-    #     xacro_file_name)
+    xacro_path = os.path.join(
+        # get_package_share_directory('turtlebot3_description'),
+        urdf_path,
+        'gamma',
+        xacro_file_name)
 
     urdf_path = os.path.join(
         # get_package_share_directory('turtlebot3_description'),
         urdf_path,
-        'urdf',
+        'gamma',
         urdf_file_name)
 
     # doc = xacro.process_file(xacro_path)
