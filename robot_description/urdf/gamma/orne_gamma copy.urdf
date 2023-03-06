@@ -41,24 +41,8 @@
    <xacro:arg name="laser_visual"  default="true"/>
    <xacro:arg name="camera_visual" default="true"/>
    <xacro:arg name="imu_visual"    default="false"/>
-
-   <!-- ros2_control_plugin -->
-   <ros2_control name="GazeboSystem" type="system">
-      <hardware>
-         <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-      </hardware>
-   </ros2_control>
+   <!-- ros_control plugin -->
    <gazebo>
-      <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-         <robot_param>robot_description</robot_param>
-         <robot_param_node>robot_state_publisher</robot_param_node>
-         <!-- <parameters>$(find manta_v2_gazebo_ros2_control)/config/manta_v2_move_group_controller.yaml</parameters> -->
-         <!-- <parameters>$(find manta_v2_gazebo_ros2_control)/config/manta_v2_trajectory_controller.yaml</parameters> -->
-      </plugin>
-   </gazebo>
-
-   <!-- ros_control plugin -->   
-   <!-- <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
       <robotSimType>icart_mini_gazebo/ICartMiniHWSim</robotSimType> 
           <robotNamespace>orne_gamma</robotNamespace>
@@ -87,8 +71,7 @@
          <wheelTorque>10</wheelTorque>
          <rosDebugLevel>na</rosDebugLevel>
       </plugin>
-   </gazebo> -->
-
+   </gazebo>
    <!-- Base Link -->
    <gazebo reference="base_link">
       <material>Gazebo/Black</material>
@@ -490,20 +473,20 @@
    <transmission name="tran1">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="left_wheel_joint">
-         <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+         <hardwareInterface>VelocityJointInterface</hardwareInterface>
       </joint>
       <actuator name="left_motor">
-         <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+         <hardwareInterface>VelocityJointInterface</hardwareInterface>
          <mechanicalReduction>1</mechanicalReduction>
       </actuator>
    </transmission>
    <transmission name="tran2">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="right_wheel_joint">
-         <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+         <hardwareInterface>VelocityJointInterface</hardwareInterface>
       </joint>
       <actuator name="right_motor">
-         <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+         <hardwareInterface>VelocityJointInterface</hardwareInterface>
          <mechanicalReduction>1</mechanicalReduction>
       </actuator>
    </transmission>

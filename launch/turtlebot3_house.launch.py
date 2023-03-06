@@ -19,6 +19,7 @@
 import os
 
 from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import get_package_share_path
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -31,9 +32,10 @@ TURTLEBOT3_MODEL = os.environ['TURTLEBOT3_MODEL']
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     # world_file_name = 'turtlebot3_houses/' + TURTLEBOT3_MODEL + '.model'
-    world_file_name = 'test.world'
+    world_file_name = 'Tsudanuma2-3.world'
     # pkg_share = os.path.join(os.environ['COLCON_PREFIX_PATH'], 'test_ros2_navigation')    
-    # world = os.path.join(pkg_path, 'worlds', world_file_name)
+    pkg_path = get_package_share_path('test_ros2_navigation')
+    world = os.path.join(pkg_path, 'worlds', world_file_name)
     world = '/home/fmasa/ros2_ws/src/test_ros2_navigation/worlds/Tsudanuma_2-3.world'
     # world_file_name = 'turtlebot3_worlds/' + TURTLEBOT3_MODEL + '.model'
     # world = os.path.join(get_package_share_directory('turtlebot3_gazebo'),

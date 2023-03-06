@@ -37,11 +37,11 @@ def generate_launch_description():
 
     print('urdf_file_name : {}'.format(urdf_file_name))
 
-    # xacro_path = os.path.join(
-    #     # get_package_share_directory('turtlebot3_description'),
-    #     urdf_path,
-    #     'urdf',
-    #     xacro_file_name)
+    xacro_path = os.path.join(
+        # get_package_share_directory('turtlebot3_description'),
+        urdf_path,
+        'urdf',
+        xacro_file_name)
 
     urdf_path = os.path.join(
         # get_package_share_directory('turtlebot3_description'),
@@ -49,11 +49,11 @@ def generate_launch_description():
         'urdf',
         urdf_file_name)
 
-    # doc = xacro.process_file(xacro_path)
-    # robot_desc = doc.toprettyxml(indent='   ')
-    # f = open(urdf_path, 'w')
-    # f.write(robot_desc)
-    # f.close()
+    doc = xacro.process_file(xacro_path)
+    robot_desc = doc.toprettyxml(indent='   ')
+    f = open(urdf_path, 'w')
+    f.write(robot_desc)
+    f.close()
 
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -66,6 +66,6 @@ def generate_launch_description():
             executable='robot_state_publisher',
             name='robot_state_publisher',
             output='screen',
-            parameters=[{'use_sim_time': use_sim_time}],
+            parameters=[{'use_sim_time': use_sim_time, 'robot_description': robot_desc}],
             arguments=[urdf_path]),
     ])
