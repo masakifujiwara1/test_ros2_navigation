@@ -34,6 +34,10 @@ def generate_launch_description():
     urdf_file_name = 'orne_gamma.urdf'
     # urdf_file_name = 'turtlebot3_' + TURTLEBOT3_MODEL + '.urdf'
     urdf_path = '/home/fmasa/ros2_ws/src/test_ros2_navigation/robot_description/urdf'
+    # urdf_path = get_package_share_directory('test_ros2_navigation')
+    # urdf_path = str(urdf_path) + '/robot_description'
+
+    urdf_path = os.path.join(urdf_path, 'gamma', urdf_file_name)
 
     print('urdf_file_name : {}'.format(urdf_file_name))
 
@@ -43,11 +47,11 @@ def generate_launch_description():
         'gamma',
         xacro_file_name)
 
-    urdf_path = os.path.join(
-        # get_package_share_directory('turtlebot3_description'),
-        urdf_path,
-        'gamma',
-        urdf_file_name)
+    # urdf_path = os.path.join(
+    #     # get_package_share_directory('turtlebot3_description'),
+    #     urdf_path,
+    #     'gamma',
+    #     urdf_file_name)
 
     # doc = xacro.process_file(xacro_path)
     # robot_desc = doc.toprettyxml(indent='   ')
@@ -67,5 +71,6 @@ def generate_launch_description():
             name='robot_state_publisher',
             output='screen',
             parameters=[{'use_sim_time': use_sim_time}],
-            arguments=[urdf_path]),
+            arguments=[urdf_path]
+            ),
     ])

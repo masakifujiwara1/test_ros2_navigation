@@ -13,6 +13,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name), glob('launch/*.launch.py')),
+        (os.path.join('share', package_name), glob('urdf/*.urdf')),
     ],
     install_requires=['setuptools', 'launch', 'gazebo_ros', 'geometry_msgs', 'nav_msgs', 'rclcpp', 'sensor_msgs', 'tf2'],
     zip_safe=True,
