@@ -46,8 +46,13 @@ def generate_launch_description():
 
     _dir = '/home/fmasa/ros2_ws/src/test_ros2_navigation'
 
-    nav2_launch_file_dir = os.path.join(_dir, 'launch')
+    # nav2_launch_file_dir = os.path.join(_dir, 'launch')
     # nav2_launch_file_dir = os.path.join(get_package_share_directory('test_ros2_navigation'), 'launch')
+    nav2_launch_file_dir = get_package_share_directory('test_ros2_navigation') + '/launch'
+    print('-'*50)
+    print(nav2_launch_file_dir)
+    print('-'*50)
+
 
     rviz_config_dir = os.path.join(
         # get_package_share_directory('nav2_bringup'),
